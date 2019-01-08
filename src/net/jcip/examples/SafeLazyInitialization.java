@@ -11,13 +11,13 @@ import net.jcip.annotations.*;
  */
 @ThreadSafe
 public class SafeLazyInitialization {
-	private static Resource resource;
+    private static Resource resource;
 
-	public synchronized static Resource getInstance() {
-		if (resource == null)
-			resource = new Resource();
-		return resource;
-	}
+    public synchronized static Resource getInstance() {
+        if (resource == null)
+            resource = new Resource();
+        return resource;
+    }
 
-	static class Resource {}
+    static class Resource {}
 }
